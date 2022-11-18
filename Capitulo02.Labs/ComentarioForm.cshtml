@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Estilo.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Exemplo Web Page</h1>
+            <h2>Html, Javascript, Css, Razor e Web Pages</h2>
+            <a href="~/Default.cshtml">Voltar</a>
+        </header>
+        <section>
+            <p>Deixe seu comentário: </p>
+            <form action="~/ComentarioProcessar.cshtml" method="post">
+                <div class="form-grupo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" />
+                </div>
+                <div class="form-grupo">
+                    <label for="comentario">Comentário</label>
+                    <textarea id="comentario" name="comentario"></textarea>
+                </div>
+                <div class="form-botoes">
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

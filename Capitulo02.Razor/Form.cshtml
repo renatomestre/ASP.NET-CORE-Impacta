@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @RenderPage("Titulo.cshtml")
+        <form action="" method="post">
+            <label>Nome:</label>
+            <input name="nome" />
+            <button type="submit">Enviar</button>
+        </form>
+        @if (IsPost)
+        {
+            var nome = Request.Form["nome"];
+            <p>Bem vindo, @nome</p>
+        }
+        @RenderPage("Rodape.cshtml")
+    </div>
+</body>
+</html>

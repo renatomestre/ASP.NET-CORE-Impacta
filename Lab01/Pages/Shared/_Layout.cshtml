@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Capitulo 01</title>
+    <style>
+        .margem {
+            margin: 50px;
+        }
+
+        .borda {
+            border: 1px solid #a9a9a9;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #d3d3d3;
+        }
+
+        .centraliza {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="margem">
+    <div class="borda centraliza">
+        <h3>Bem vindo ao curso de Asp.Net</h3>
+    </div>
+    <h4>Aproveite todo o conteúdo:</h4>
+    <ul>
+        <li>Asp.Net MVC</li>
+        <li>Entity Framework</li>
+        <li>Asp.Net Core</li>
+        <li>e muito mais...</li>
+    </ul>
+    
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

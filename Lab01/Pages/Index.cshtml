@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<hr />
+
+<div class="container">
+    <form>
+        <div class="row g-3">
+            <div class="col-md-5">
+                <label for="inputProcesso" class="form-label">Processo</label>
+                <input type="text" class="form-control" id="inputProcesso" aria-describedby="helpProcesso" required>
+                <small id="helpProcesso" class="form-text">Sem pontos ou traços.</small>
+            </div>
+            <div class="col-md-2">
+                <label for="inputVara" class="form-label">Vara</label>
+                <input type="text" class="form-control" id="inputVara">
+            </div>
+            <div class="col-md-2">
+                <label for="inputGrau" class="form-label">Grau</label>
+                <select class="form-select" id="selectGrau">
+                    <option value="1">1º</option>
+                    <option value="2">2º</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="inputRegional" class="form-label">Petição inicial</label>
+                <input type="date" class="form-control" id="inputRegional">
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-2">
+                <label for="inputUf" class="form-label">UF</label>
+                <input type="text" class="form-control" id="inputUF" maxlength="2">
+            </div>
+            <div class="col-10">
+                <label for="inputCidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="inputCidade">
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

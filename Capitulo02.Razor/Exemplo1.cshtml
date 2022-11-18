@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Aula Razor - Exemplo1</title>
+</head>
+<body>
+    <div>
+        <p>Hoje é @DateTime.Now</p>
+
+        @*<p>Hoje é @DateTime.Now</p>*@
+        @{
+            var x = 10;
+            var y = 5;
+        }
+        <p>A soma de @x com @y é @(x + y)</p>
+
+        <hr />
+        <p>Contato: vendas@empresa.com.br</p>
+        Escrevendo um arroba DateTime: @@DateTime
+
+        @{ int i = 1;
+            while (i <= 10)
+            {
+                <p>
+                    O valor de i é
+                    <span>@i</span>
+                </p>
+                i = i + 1;
+            }
+        }
+
+        @if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+        {
+            <span>
+                Hoje é sexta-feira.
+                Agora são @DateTime.Now.ToShortTimeString()
+            </span>
+        }
+        else
+        {
+            <span>
+                Hoje não é sexta
+            </span>
+        }
+
+        @RenderPage("Titulo.cshtml")
+
+        <p>Bem-vindo ao site</p>
+
+        @RenderPage("Rodape.cshtml")
+    </div>
+</body>
+</html>
