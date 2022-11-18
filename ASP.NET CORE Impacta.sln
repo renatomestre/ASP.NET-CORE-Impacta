@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo01.Labs", "Capitulo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo03.Labs", "Capitulo03.Labs\Capitulo03.Labs.csproj", "{B172B2F6-44CF-43F7-800C-979A2CEF805C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo03.Exercicio.Livraria", "Capitulo03.Exercicio.Livraria\Capitulo03.Exercicio.Livraria.csproj", "{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B172B2F6-44CF-43F7-800C-979A2CEF805C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B172B2F6-44CF-43F7-800C-979A2CEF805C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B172B2F6-44CF-43F7-800C-979A2CEF805C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
