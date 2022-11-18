@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Hello World";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    Este é o método '@nameof(Capitulo03.MVC.Controllers.HelloWorldController.Index)' do @nameof(Capitulo03.MVC.Controllers.HelloWorldController).
+    <br />
+    @Html.ActionLink("Index (texto)", "IndexTexto")
+    <br />
+    @Html.ActionLink("Welcome (View)", "Welcome", new { nome = "Renato", idade = 36 })
+    <br />
+    @Html.ActionLink("Welcome (string)", "WelcomeTexto", new { nome = "Renato", idade = 36 })
+</p>
