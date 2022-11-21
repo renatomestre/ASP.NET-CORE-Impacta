@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo03.MVC", "Capitulo0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo01.Labs", "Capitulo01.Labs\Capitulo01.Labs.csproj", "{3FC709A9-2989-4396-8A0D-898234C1FB76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo03.Labs", "Capitulo03.Labs\Capitulo03.Labs.csproj", "{B172B2F6-44CF-43F7-800C-979A2CEF805C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo03.Labs", "Capitulo03.Labs\Capitulo03.Labs.csproj", "{B172B2F6-44CF-43F7-800C-979A2CEF805C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo03.Exercicio.Livraria", "Capitulo03.Exercicio.Livraria\Capitulo03.Exercicio.Livraria.csproj", "{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capitulo03.Exercicio.Livraria", "Capitulo03.Exercicio.Livraria\Capitulo03.Exercicio.Livraria.csproj", "{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo04.HelloEntityFramework", "Capitulo04.HelloEntityFramework\Capitulo04.HelloEntityFramework.csproj", "{60FCB8C3-BFBF-4166-A4AF-D27796C65D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA34419-1AE3-4D6A-900F-C9B7BDFC047D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FCB8C3-BFBF-4166-A4AF-D27796C65D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FCB8C3-BFBF-4166-A4AF-D27796C65D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FCB8C3-BFBF-4166-A4AF-D27796C65D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FCB8C3-BFBF-4166-A4AF-D27796C65D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
