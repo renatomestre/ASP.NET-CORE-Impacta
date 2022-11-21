@@ -1,7 +1,11 @@
+using Capitulo04.HelloEntityFramework.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<NorthWindContext>(x => x.UseSqlServer("Data Source=.\\Localhost; Initial catalog=NorthWind; trusted_connection=yes"));
 
 var app = builder.Build();
 
