@@ -1,3 +1,5 @@
+# Visual Studio 2022
+
 ## 1) Criar novo projeto
 
       ASP.NET Core Web App (Model-View-Controller)
@@ -7,7 +9,7 @@
 * Microsoft.EntityFrameworkCore 6.0.11
 * Microsoft.EntityFrameworkCore.SqlServer 6.0.11
 * Microsoft.EntityFrameworkCore.Tools 6.0.11
-* Microsoft.VisualStudio.Web.CodeGeneration.Desi 6.0.10
+* Microsoft.VisualStudio.Web.CodeGeneration.Design 6.0.10
 
 ## 3) Inserir o seguinte trecho em Program.cs
 
