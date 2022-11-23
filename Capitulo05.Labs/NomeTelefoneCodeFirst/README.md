@@ -4,7 +4,7 @@
 * Microsoft.EntityFrameworkCore 6.0.11
 * Microsoft.EntityFrameworkCore.SqlServer 6.0.11
 * Microsoft.EntityFrameworkCore.Tools 6.0.11
-* Microsoft.VisualStudio.Web.CodeGeneration.Desi 6.0.1
+* Microsoft.VisualStudio.Web.CodeGeneration.Desi 6.0.10
 
 ## 1) Criar novo projeto
 
