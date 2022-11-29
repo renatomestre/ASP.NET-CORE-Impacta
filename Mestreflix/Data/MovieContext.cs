@@ -38,6 +38,18 @@ namespace Mestreflix.Data
                     Title = "Top Gun - Maverick"
                 }
             });
+
+            modelBuilder.Entity<Review>().HasData(new Review[]
+                {
+                    new Review
+                    {
+                        Id = 1,
+                        Email = "renato.mestre@hotmail.com",
+                        FullName = "Renato Mestre",
+                        MovieId = 1,
+                        Text = "Achei bem bacana, inclusive para a época!\nLançou no mês que eu nasci..."
+                    }
+                });
         }
     }
 }

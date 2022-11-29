@@ -1,7 +1,6 @@
 ﻿using Mestreflix.Data;
 using Mestreflix.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mestreflix.Controllers
@@ -18,7 +17,8 @@ namespace Mestreflix.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Movies.ToListAsync());
+            //return View(await _context.Movies.ToListAsync());
+            return View(await _context.Movies.Include(s => s.Reviews).ToListAsync());
         }
 
         // GET: Movies/Details/5

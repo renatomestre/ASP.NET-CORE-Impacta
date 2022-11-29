@@ -39,6 +39,7 @@
                         @foreach (Review? review in item.Reviews)
                         {
                             <p>@review.Text</p>
+                            <small class="text-muted"><b>@review.FullName</b> @review.Email</small>
                         }
                     </div>
                 </div>
