@@ -30,15 +30,15 @@
             </div>
             <div class="mt-2">
                 <p>
-                    <a data-bs-toggle="collapse" href="#collapseComments-@item.Id" role="button" aria-expanded="false" aria-controls="collapseComments-@item.Id">
+                    <u data-bs-toggle="collapse" href="#collapseComments-@item.Id" role="button" aria-expanded="false" aria-controls="collapseComments-@item.Id">
                         Reviews (@(item.Reviews.Count))
-                    </a>
+                    </u>
                 </p>
                 <div class="collapse" id="collapseComments-@item.Id">
                     <div class="card card-body bg-dark text-light">
                         @foreach (Review? review in item.Reviews)
                         {
-                            <p>@review.Text</p>
+                            <em>@review.Text</em>
                             <small class="text-muted"><b>@review.FullName</b> @review.Email</small>
                         }
                     </div>
