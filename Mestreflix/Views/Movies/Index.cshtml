@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Mestreflix.Models.Movie>
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<p>
+    <a class="btn btn-light" asp-action="Create">+ Adicionar</a>
+</p>
+
+<p>@Html.ValidationSummary()</p>
+
+<div class="row">
+    @foreach (Movie? item in Model.OrderBy(m => m.ReleaseDate))
+    {
+        <div class="col-md-3">
+            <img src="@Html.DisplayFor(modelItem => item.Cover)" height="350" />
+            <br>
+            @Html.DisplayFor(modelItem => item.Title)
+            <br>
+            @Html.DisplayFor(modelItem => item.ReleaseDate)
+            <br>
+            @Html.DisplayFor(modelItem => item.Genre)
+            <br>
+            R$ @Html.DisplayFor(modelItem => item.Price)
+            <div class="mt-1">
+                <a class="btn btn-outline-light" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class="btn btn-outline-light" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </div>
+            <div class="mt-2">
+                <p>
+                    <a data-bs-toggle="collapse" href="#collapseComments-@item.Id" role="button" aria-expanded="false" aria-controls="collapseComments-@item.Id">
+                        Reviews (@(item.Reviews.Count))
+                    </a>
+                </p>
+                <div class="collapse" id="collapseComments-@item.Id">
+                    <div class="card card-body bg-dark text-light">
+                        @foreach (Review? review in item.Reviews)
+                        {
+                            <p>@review.Text</p>
+                        }
+                    </div>
+                </div>
+                @await Html.PartialAsync("_ReviewForm", new Review { MovieId = item.Id })
+            </div>
+        </div>
+    }
+</div>
