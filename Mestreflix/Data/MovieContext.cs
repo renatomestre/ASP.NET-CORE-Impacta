@@ -35,7 +35,7 @@ namespace Mestreflix.Data
                     Genre = "Ação",
                     Price = (decimal)198.8,
                     ReleaseDate = new DateTime(2022, 05, 26),
-                    Title = "TopGun - Maverick"
+                    Title = "Top Gun - Maverick"
                 }
             });
         }
