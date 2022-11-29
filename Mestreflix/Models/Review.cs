@@ -8,7 +8,8 @@ namespace Mestreflix.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string? FullName { get; set; }
+        [Required]
+        public string FullName { get; set; }
 
         [Required]
         public string Email { get; set; }
@@ -19,6 +20,6 @@ namespace Mestreflix.Models
 
         public int MovieId { get; set; }
 
-        public Movie Movie { get; set; }
+        public Movie? Movie { get; set; }
     }
 }

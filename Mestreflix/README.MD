@@ -4,11 +4,11 @@
 
 ## MESTREFLIX (Code First)
 
-* Bootstrap 5 layout :100:
-* Using \<select> tag with Razor :100:
-* Scaffolding :100:
-* Migration :100:
-* Master/Detail (not working yet :()
+* Bootstrap 5 layout :white_check_mark:
+* Using \<select> tag with Razor :white_check_mark:
+* Scaffolding :white_check_mark:
+* Migration :white_check_mark:
+* Master/Detail :white_check_mark:
 
 ## Steps to run
 

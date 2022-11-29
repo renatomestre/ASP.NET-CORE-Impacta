@@ -70,14 +70,12 @@ namespace Mestreflix.Controllers
         {
             if (ModelState.IsValid)
             {
-                var movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == review.MovieId);
+                var movie = await _context.Movies.Include(m => m.Reviews).FirstOrDefaultAsync(m => m.Id == review.MovieId);
                 if (movie == null)
-                {
                     return NotFound();
-                }
                 else
                     movie.Reviews.Add(review);
-                _context.Add(movie);
+                _context.Update(movie);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
