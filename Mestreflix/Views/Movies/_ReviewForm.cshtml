@@ -1,28 +1,26 @@
 ﻿@model Mestreflix.Models.Review
 
-<div class="">
-    <form asp-action="CreateReview">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="FullName" class="control-label">Nome completo</label>
-            <input asp-for="FullName" class="form-control" required />
-            <span asp-validation-for="FullName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Email" class="control-label">Seu melhor e-mail</label>
-            <input asp-for="Email" class="form-control" required />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="Text" class="control-label">O que achou?</label>
-            <input asp-for="Text" class="form-control" required />
-            <span asp-validation-for="Text" class="text-danger"></span>
-        </div>
-        <div class="form-group" style="display: none">
-            <input asp-for="MovieId" class="form-control" />
-        </div>
-        <div class="form-group mt-3">
-            <input type="submit" value="Comentar" class="btn btn-primary" />
-        </div>
-    </form>
-</div>
+<form asp-action="CreateReview">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group input-group-sm">
+        <label asp-for="FullName" class="control-label">Nome completo</label>
+        <input asp-for="FullName" class="form-control" required />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="form-group input-group-sm">
+        <label asp-for="Email" class="control-label">Seu melhor e-mail</label>
+        <input asp-for="Email" class="form-control" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group input-group-sm">
+        <label asp-for="Text" class="control-label">O que achou?</label>
+        @Html.TextAreaFor(m => m.Text, new { @class = "form-control", @required = "required" })
+        <span asp-validation-for="Text" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="display: none">
+        <input asp-for="MovieId" class="form-control" />
+    </div>
+    <div class="form-group mt-3">
+        <input type="submit" value="Comentar" class="btn btn-primary btn-sm" />
+    </div>
+</form>

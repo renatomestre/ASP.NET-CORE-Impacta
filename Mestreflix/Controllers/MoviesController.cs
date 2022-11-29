@@ -17,7 +17,6 @@ namespace Mestreflix.Controllers
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-            //return View(await _context.Movies.ToListAsync());
             return View(await _context.Movies.Include(s => s.Reviews).ToListAsync());
         }
 
@@ -77,8 +76,9 @@ namespace Mestreflix.Controllers
                     movie.Reviews.Add(review);
                 _context.Update(movie);
                 await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(Index));
+            return View("Index", await _context.Movies.Include(s => s.Reviews).ToListAsync());
         }
 
         // GET: Movies/Edit/5

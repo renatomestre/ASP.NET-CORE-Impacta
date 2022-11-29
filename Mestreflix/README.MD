@@ -6,6 +6,7 @@
 
 * Bootstrap 5 layout :white_check_mark:
 * Using \<select> tag with Razor :white_check_mark:
+* Razor Partial :white_check_mark:
 * Scaffolding :white_check_mark:
 * Migration :white_check_mark:
 * Master/Detail :white_check_mark:

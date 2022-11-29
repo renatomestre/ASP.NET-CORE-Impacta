@@ -8,8 +8,6 @@
     <a class="btn btn-light" asp-action="Create">+ Adicionar</a>
 </p>
 
-<p>@Html.ValidationSummary()</p>
-
 <div class="row">
     @foreach (Movie? item in Model.OrderBy(m => m.ReleaseDate))
     {
@@ -29,10 +27,8 @@
                 <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
             </div>
             <div class="mt-2">
-                <p>
-                    <p data-bs-toggle="collapse" href="#collapseComments-@item.Id" role="button" aria-expanded="false" aria-controls="collapseComments-@item.Id">
-                        ⭐ Reviews (@(item.Reviews.Count))
-                    </p>
+                <p data-bs-toggle="collapse" href="#collapseComments-@item.Id" role="button" aria-expanded="false" aria-controls="collapseComments-@item.Id">
+                    ⭐ <u>Reviews</u> (@(item.Reviews.Count))
                 </p>
                 <div class="collapse" id="collapseComments-@item.Id">
                     @foreach (Review? review in item.Reviews)
