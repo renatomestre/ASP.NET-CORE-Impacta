@@ -10,11 +10,13 @@
 * Migration :100:
 * Master/Detail (not working yet :()
 
-### 1) Change string connection where:
+## Steps to run
+
+### 1) Change StringConnection:
 
 *MoviesConnection* on <b>appsettings.json</b>
 
-### 2) Run migration before start:
+### 2) Run migration:
 
         Update-Database
 
