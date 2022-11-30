@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NomeTelefoneCodeFirst", "Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mestreflix", "Mestreflix\Mestreflix.csproj", "{F0B7DEF3-2013-4B7F-A825-75B412020C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityAppMVC", "IdentityAppMVC\IdentityAppMVC.csproj", "{AF34B5C8-7483-4E0D-812C-09D7D9EB5194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityAppMVC", "IdentityAppMVC\IdentityAppMVC.csproj", "{AF34B5C8-7483-4E0D-812C-09D7D9EB5194}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contatinhos", "Contatinhos\Contatinhos.csproj", "{433EFA25-7235-4D1D-BD34-98FE3E900A0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi-Introducao", "WebApi-Introducao\WebApi-Introducao.csproj", "{688B0E1F-2781-4F1D-A979-C274AA6830EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{433EFA25-7235-4D1D-BD34-98FE3E900A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433EFA25-7235-4D1D-BD34-98FE3E900A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433EFA25-7235-4D1D-BD34-98FE3E900A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688B0E1F-2781-4F1D-A979-C274AA6830EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688B0E1F-2781-4F1D-A979-C274AA6830EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688B0E1F-2781-4F1D-A979-C274AA6830EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688B0E1F-2781-4F1D-A979-C274AA6830EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
