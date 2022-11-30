@@ -6,15 +6,20 @@ namespace Contatinhos.Repositorio
     public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly ApplicationDbContext _context;
+
         public UsuarioRepositorio(ApplicationDbContext bancoContext)
         {
             this._context = bancoContext;
-
         }
 
         public UsuarioModel ListarPorId(int id)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Id == id);
+        }
+
+        public UsuarioModel BuscarPorId(int id)
+        {
+            return _context.Usuarios.Find(id);
         }
 
         public List<UsuarioModel> BuscarTodos()
@@ -35,7 +40,6 @@ namespace Contatinhos.Repositorio
             UsuarioModel usuarioDb = ListarPorId(usuario.Id);
             if (usuarioDb == null) throw new System.Exception("Houve um erro de atualização");
 
-
             usuarioDb.Nome = usuario.Nome;
             usuarioDb.Email = usuario.Email;
             usuarioDb.Login = usuario.Login;
@@ -55,6 +59,5 @@ namespace Contatinhos.Repositorio
             _context.SaveChanges();
             return true;
         }
-
     }
 }

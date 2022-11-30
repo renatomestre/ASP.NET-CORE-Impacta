@@ -44,7 +44,9 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
+                <th scope="col">Perfil</th>
                 <th scope="col">Data de Cadastro</th>
+                <th scope="col">Atualizado em</th>
                 <th scope="col"></th>
             </tr>
         </thead>
@@ -58,7 +60,9 @@
                         <td>@usuario.Nome</td>
                         <td>@usuario.Login</td>
                         <td>@usuario.Email</td>
+                        <td>@usuario.Perfil</td>
                         <td>@usuario.DataCadastro</td>
+                        <td>@usuario.DataAtualização</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" asp-action="Editar" asp-controller="Usuario" asp-route-id="@usuario.Id" class="btn btn-primary">Editar</a>

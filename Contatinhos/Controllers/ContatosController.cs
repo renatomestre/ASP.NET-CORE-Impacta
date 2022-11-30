@@ -1,5 +1,4 @@
-﻿using Contatinhos.Data.Migrations;
-using Contatinhos.Models;
+﻿using Contatinhos.Models;
 using Contatinhos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,12 +6,12 @@ namespace Contatinhos.Controllers
 {
     public class ContatosController : Controller
     {
-		private readonly IContatoRepositorio _contatoRepositorio;
+        private readonly IContatoRepositorio _contatoRepositorio;
 
-		public ContatosController(IContatoRepositorio contatoRepositorio)
+        public ContatosController(IContatoRepositorio contatoRepositorio)
         {
-			this._contatoRepositorio = contatoRepositorio;
-		}
+            this._contatoRepositorio = contatoRepositorio;
+        }
 
         public IActionResult Index()
         {
@@ -25,21 +24,20 @@ namespace Contatinhos.Controllers
             return View();
         }
 
-		[HttpPost]
-		public IActionResult Criar(Contato contato)
-		{
-			if (ModelState.IsValid)
-			{
-				_contatoRepositorio.Adicionar(contato);
-				TempData["SuccessMessage"] = "Criado com sucesso";
-				return RedirectToAction(nameof(Index));
-			}
-			TempData["ErrorMessage"] = "Verifique os campos e tente novamente";
-			return View();
-		}
+        [HttpPost]
+        public IActionResult Criar(Contato contato)
+        {
+            if (ModelState.IsValid)
+            {
+                _contatoRepositorio.Adicionar(contato);
+                TempData["SuccessMessage"] = "Criado com sucesso";
+                return RedirectToAction(nameof(Index));
+            }
+            TempData["ErrorMessage"] = "Verifique os campos e tente novamente";
+            return View();
+        }
 
-
-		public IActionResult Editar(int id)
+        public IActionResult Editar(int id)
         {
             var contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
@@ -50,27 +48,26 @@ namespace Contatinhos.Controllers
         {
             if (ModelState.IsValid)
             {
-				_contatoRepositorio.Atualizar(model);
-				TempData["SuccessMessage"] = "Editado com sucesso";
-				return RedirectToAction(nameof(Editar), new { id = model.Id });
-			}
-			TempData["ErrorMessage"] = "Verifique os campos e tente novamente";
-			return View(model);
+                _contatoRepositorio.Atualizar(model);
+                TempData["SuccessMessage"] = "Editado com sucesso";
+                return RedirectToAction(nameof(Editar), new { id = model.Id });
+            }
+            TempData["ErrorMessage"] = "Verifique os campos e tente novamente";
+            return View(model);
         }
 
         public IActionResult ApagarConfirmacao(int id)
         {
-			var contato = _contatoRepositorio.BuscarPorId(id);
-			return View(contato);
+            var contato = _contatoRepositorio.BuscarPorId(id);
+            return View(contato);
         }
 
         [HttpPost]
-		public IActionResult ApagarConfirmacaoPost(int id)
-		{
+        public IActionResult ApagarConfirmacaoPost(int id)
+        {
             _contatoRepositorio.Apagar(id);
-			TempData["SuccessMessage"] = "Apagado com sucesso";
-			return RedirectToAction(nameof(Index));
-		}
-
-	}
+            TempData["SuccessMessage"] = "Apagado com sucesso";
+            return RedirectToAction(nameof(Index));
+        }
+    }
 }
