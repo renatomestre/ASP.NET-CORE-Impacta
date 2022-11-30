@@ -1,0 +1,31 @@
+﻿@model UsuarioModel
+
+<div class="mb-3">
+    <label for="nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Digite seu nome">
+    @Html.ValidationMessageFor(x =>x.Nome)</
+</div>
+
+<div class="mb-3">
+    <label for="login">Login</label>
+    <input type="text" asp-for="Login" class="form-control" placeholder="Digite seu login">
+    @Html.ValidationMessageFor(x =>x.Login)</
+</div>
+
+<div class="mb-3">
+    <label for="email">Email</label>
+    <input type="text" asp-for="Email" class="form-control" placeholder="Digite seu e-mail">
+    @Html.ValidationMessageFor(x =>x.Email)</
+</div>
+
+<div class="mb-3">
+    <label for="senha">Senha</label>
+    <input type="password" asp-for="Senha" class="form-control" placeholder="Digite sua senha">
+    @Html.ValidationMessageFor(x =>x.Senha)</
+</div>
+
+@*
+public PerfilEnum Perfil { get; set; }
+public DateTime DataCadastro { get; set; }
+public DateTime? DataAtualização { get; set; }
+*@

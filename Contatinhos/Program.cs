@@ -1,7 +1,7 @@
+using AutoMapper;
 using Contatinhos.Data;
 using Contatinhos.Models;
 using Contatinhos.Repositorio;
-using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,12 +17,16 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
 //DI
 builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
 
 //Automapper
-var configuration = new MapperConfiguration(cfg => {
-    cfg.CreateMap<Contato,Contato>();
+var configuration = new MapperConfiguration(cfg =>
+{
+    cfg.CreateMap<Contato, Contato>();
 });
 builder.Services.AddScoped<IMapper>(a => new Mapper(configuration));
 
