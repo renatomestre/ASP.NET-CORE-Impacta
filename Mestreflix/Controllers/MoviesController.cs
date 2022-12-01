@@ -175,5 +175,10 @@ namespace Mestreflix.Controllers
         {
             return _context.Movies.Any(e => e.Id == id);
         }
+
+        public ActionResult Play()
+        {
+            return View();
+        }
     }
 }
