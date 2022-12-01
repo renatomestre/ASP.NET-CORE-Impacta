@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mestreflix.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Mestreflix.Models;
 
 namespace Mestreflix.Controllers
 {
@@ -15,7 +15,12 @@ namespace Mestreflix.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            TempData["baseUri"] = $"//{Request.Host}";
+
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index", "Movies");
+            else
+                return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

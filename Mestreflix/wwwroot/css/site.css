@@ -23,3 +23,14 @@ body {
     font-stretch: condensed;
     font-weight: bold;
 }
+
+/* Identity CSS */
+
+#account a, #change-password-form a, #email-form a, #profile-form a, #registerForm a {
+    color: lightslategray;
+}
+
+#account input, #change-password-form input, #email-form input, #profile-form input, #registerForm input {
+    background-color: darkslategrey;
+    color: white;
+}

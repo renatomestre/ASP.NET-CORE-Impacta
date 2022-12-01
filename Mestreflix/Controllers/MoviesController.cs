@@ -1,10 +1,12 @@
 ﻿using Mestreflix.Data;
 using Mestreflix.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mestreflix.Controllers
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private readonly MovieContext _context;

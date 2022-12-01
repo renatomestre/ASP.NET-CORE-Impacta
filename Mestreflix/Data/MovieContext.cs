@@ -1,9 +1,10 @@
 ﻿using Mestreflix.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mestreflix.Data
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext
     {
         public MovieContext(DbContextOptions<MovieContext> options) : base(options) { }
 
@@ -12,6 +13,8 @@ namespace Mestreflix.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Review>()
                 .HasOne(p => p.Movie)
                 .WithMany(b => b.Reviews)

@@ -2,7 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-function playNetflixSound() {
-    let audio = new Audio('mp3/netflix-jingle.mp3');
+function playNetflixSound(baseUrl) {
+    let audio = new Audio(baseUrl + '/mp3/netflix-jingle.mp3');
     audio.play();
 }
